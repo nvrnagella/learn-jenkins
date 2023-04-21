@@ -13,6 +13,11 @@ pipeline{
                 echo 'Hello world'
             }
         }
+        post{
+            always{
+                echo "sending an email"
+            }
+        }
 
     }
 }
