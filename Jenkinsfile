@@ -8,9 +8,24 @@ pipeline{
                 cleanWs()
             }
         }
-        stage('Hello'){
+        stage('compile/built'){
             steps{
-                echo 'Hello world'
+                echo 'compiling'
+            }
+        }
+        stage('unit test'){
+            steps{
+                echo 'running test cases'
+            }
+        }
+        stage('code analysis'){
+            steps{
+                echo 'scanning code in sonar qube'
+            }
+        }
+        stage('code to centralized place'){
+            steps{
+                echo 'code to centralized place'
             }
         }
     }
